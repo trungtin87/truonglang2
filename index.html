@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Làng Quán - Hương Vị Đồng Quê Tây Ninh</title>
+    <!-- Nhúng Bootstrap 5 để hỗ trợ giao diện Responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nhúng Google Fonts (Font chữ mộc mạc và hiện đại) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2d5a27; /* Màu xanh lá cây đậm đại diện vườn rau */
+            --light-green: #f4f9f4;
+            --warm-orange: #d96b27;  /* Màu cam đất kích thích vị giác */
+            --dark-brown: #3e2723;   /* Màu nâu gỗ nhà chòi */
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* 1. Hero Section */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('anhnen.jpg') no-repeat center center/cover;
+            /* Lưu ý: Sau này anh có thể thay link ảnh Unsplash trên bằng ảnh toàn cảnh quán của anh */
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+        }
+        .btn-custom-orange {
+            background-color: var(--warm-orange);
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-custom-orange:hover {
+            background-color: #b85319;
+            color: white;
+        }
+        .btn-custom-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-custom-outline:hover {
+            background-color: white;
+            color: var(--dark-brown);
+        }
+
+        /* 2. Strengths Section */
+        .strength-icon {
+            font-size: 2.5rem;
+            color: var(--warm-orange);
+            margin-bottom: 15px;
+        }
+
+        /* 3. Food Section */
+        .food-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+        }
+        .food-img-container {
+            height: 250px;
+            overflow: hidden;
+        }
+        .food-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 4. Garden and Space Sections */
+        .bg-light-green {
+            background-color: var(--light-green);
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-green);
+        }
+        .nav-pills .nav-link {
+            color: var(--primary-green);
+            font-weight: 500;
+        }
+
+        /* 5. Party Section */
+        .party-section {
+            background-color: #fff3e0;
+            border-left: 5px solid var(--warm-orange);
+        }
+
+        /* 6. Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: #efebe9;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1: HERO SECTION (20%) -->
+    <header class="hero-section d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3 text-warning">TRƯỜNG LÀNG QUÁN</h1>
+            <p class="lead fs-3 mb-4 ">Hương vị đồng quê giữa không gian xanh mát</p>
+            <p class="fs-5 mb-5 max-w-75 mx-auto">Đặc sản đồng quê • Tiệc gia đình • Liên hoan • Sinh nhật • Họp mặt bạn bè</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="tel:+84784325522" class="btn btn-custom-orange text-uppercase">📞 Đặt bàn ngay</a>
+                <a href="#menu" class="btn btn-custom-outline text-uppercase">📋 Xem thực đơn</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: VÌ SAO KHÁCH HÀNG CHỌN QUÁN (10%) -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5 text-success" style="color: var(--primary-green) !important;">Điểm Nổi Bật Tại Trường Làng</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('baidauxe.jpg') no-repeat  center/cover;; background-size: cover; background-position: center; color: white; border-radius: 10px;">
+                    <div class="strength-icon">🚗</div>
+                    <h5 class="fw-bold">Bãi Đậu Xe Rộng</h5>
+                    <p class="text">Đỗ được nhiều ô tô thoải mái và xe máy an toàn.</p>
+                </div>
+                <div class="col-md-3 col-sm-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('khonggianxanh1.jpg') no-repeat  center/cover;; background-size: cover; background-position: center; color: white; border-radius: 10px;">
+                    <div class="strength-icon">🌿</div>
+                    <h5 class="fw-bold">Không Gian Sân Vườn</h5>
+                    <p class="text">4 nhà chòi thoáng mát giữa khuôn viên xanh biệt lập.</p>
+                </div>
+                <div class="col-md-3 col-sm-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('raumuong.jpg') no-repeat  center/cover;; background-size: cover; background-position: center; color: white; border-radius: 10px;">
+                    <div class="strength-icon">🥬</div>
+                    <h5 class="fw-bold">Rau Sạch Tại Vườn</h5>
+                    <p class="text">Nhiều loại rau được chăm sóc ngay phía sau quán.</p>
+                </div>
+                <div class="col-md-3 col-sm-6" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('phongdattiec.jpg') no-repeat  center/cover;; background-size: cover; background-position: center; color: white; border-radius: 10px;">
+                    <div class="strength-icon">🎉</div>
+                    <h5 class="fw-bold">Nhận Tiệc Đến 10 Bàn</h5>
+                    <p class="text">Không gian lý tưởng cho sinh nhật, thôi nôi, liên hoan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MÓN ĂN NỔI BẬT (20%) -->
+    <section id="menu" class="py-5 bg-light-green">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: var(--primary-green);">Món Ngon Đồng Quê Đặc Sắc</h2>
+            <div class="row g-4">
+                <!-- Món 1 -->
+                <div class="col-md-4">
+                    <div class="card food-card">
+                        <div class="food-img-container">
+                            <img src="FB_IMG_1781621281993.jpg" alt="Cơm cháy kho quẹt">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Cơm cháy kho quẹt</h5>
+                            <p class="card-text text-muted">Cơm cháy giòn rụm kết hợp kho quẹt đậm đà và rau luộc thanh mát.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Món 2 -->
+                <div class="col-md-4">
+                    <div class="card food-card">
+                        <div class="food-img-container">
+                            <img src="FB_IMG_1781621359756.jpg" alt="Gà hấp mắm nhĩ">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Gà hấp mắm nhĩ</h5>
+                            <p class="card-text text-muted">Thịt gà thả vườn săn chắc, da vàng bóng bẩy đượm vị mắm nhĩ thơm lừng.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Món 3 -->
+                <div class="col-md-4">
+                    <div class="card food-card">
+                        <div class="food-img-container">
+                            <img src="FB_IMG_1781621281993.jpg" alt="Cá đồng chiên giòn & Thịt luộc cuốn rau vườn">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Cá đồng chiên & Thịt cuốn rau vườn</h5>
+                            <p class="card-text text-muted">Mẹt cá chiên giòn rụm phối cùng thịt luộc và rổ rau vườn xanh ngắt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: KHÔNG GIAN SÂN VƯỜN - VŨ KHÍ CHIẾN LƯỢC (25%) -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3" style="color: var(--primary-green);">Không Gian Rộng Rãi Cho Mọi Cuộc Gặp Gỡ</h2>
+            <p class="text-muted max-w-75 mx-auto mb-4">Khuôn viên dài 100m với nhiều cây xanh, nhà chòi riêng tư và không khí thoáng đãng, thích hợp cho gia đình, bạn bè và các buổi họp mặt cuối tuần.</p>
+            
+            <!-- Tab Bộ Lọc Album Ảnh 
+            <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" type="button">Tất cả không gian</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" type="button">Hệ thống Nhà Chòi</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" type="button">Khu Đặt Tiệc</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" type="button">Bãi Xe Ô Tô</button></li>
+            </ul>
+            -->
+            <!-- Giả lập Gallery Ảnh không gian rộng rãi -->
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6"><img src="baidauxe.jpg" class="img-fluid rounded" alt="Không gian quán"></div>
+                <div class="col-md-4 col-sm-6"><img src="phongdattiec.jpg" class="img-fluid rounded" alt="Nhà chòi sân vườn"></div>
+                <div class="col-md-4 col-sm-6"><img src="nhachoi.jpg" class="img-fluid rounded" alt="Bàn tiệc ngoài trời"></div>
+                <div class="col-md-4 col-sm-6"><img src="khonggianxanh1.jpg" class="img-fluid rounded" alt="Bàn tiệc ngoài trời"></div>
+                <div class="col-md-4 col-sm-6"><img src="khonggianxanh2.jpg" class="img-fluid rounded" alt="Bàn tiệc ngoài trời"></div>
+                <div class="col-md-4 col-sm-6"><img src="anhngoai.jpg" class="img-fluid rounded" alt="Bàn tiệc ngoài trời"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: VƯỜN RAU SAU QUÁN (10%) -->
+    <section class="py-5 bg-light-green">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <div class="col-12"><img src="raumuong.jpg" class="img-fluid rounded" alt="Vườn rau"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="badge bg-success mb-2">Độc quyền độc đáo</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--primary-green);">Rau Xanh Từ Khu Vườn Phía Sau Quán</h2>
+                    <p class="fs-5 text-muted lh-base">Một phần rau tươi ngon phục vụ thực khách được gieo trồng và chăm sóc kỹ lưỡng ngay trong khuôn viên vườn sau của quán. Đảm bảo mang lại sự tươi sạch, an toàn trọn vẹn trong từng bữa ăn đồng quê.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: NHẬN ĐẶT TIỆC (10%) -->
+    <section class="py-5 party-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <h2 class="fw-bold text-dark mb-4">🎉 Nhận Đặt Tiệc Liên Hoan Lên Đến 10 Bàn</h2>
+                <img src="tiecsinhnhat.jpg" class="img-fluid rounded" alt="Tiệc sinh nhật trong nhà ">
+                <img src="phongdattiec.jpg" class="img-fluid rounded" alt="phòng đặt tiệc lớn">
+                <div class="col-md-7">
+                        <div class="row g-3 fs-5">
+                        <div class="col-sm-6">✔ Sinh nhật ý nghĩa</div>
+                        <div class="col-sm-6">✔ Thôi nôi ấm áp</div>
+                        <div class="col-sm-6">✔ Liên hoan công ty</div>
+                        <div class="col-sm-6">✔ Họp lớp rộn ràng</div>
+                        <div class="col-sm-6">✔ Tiệc gia đình sum vầy</div>
+                    </div>
+                </div>
+                <div class="col-md-5 text-md-end text-center">
+                    <a href="tel:+84784325522" class="btn btn-custom-orange btn-lg text-uppercase py-3 px-4">📞 Liên Hệ Đặt Tiệc Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ĐÁNH GIÁ TỪ KHÁCH HÀNG -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: var(--primary-green);">Thực Khách Nói Gì Về Chúng Tôi</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 rounded bg-light border-start border-success border-3">
+                        <p class="fst-italic">"Quán rộng rãi dã man, mấy đứa nhỏ nhà mình chạy nhảy thoải mái luôn. Thích nhất là ngồi chòi riêng tư, mát mẻ không cần máy lạnh. Gà hấp mắm nhĩ ở đây ăn rất cuốn!"</p>
+                        <h6 class="fw-bold mb-0 text-end">- Anh Hoàng (Trảng Bàng)</h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 rounded bg-light border-start border-success border-3">
+                        <p class="fst-italic">"Cuối tuần rồi mới tổ chức sinh nhật cho bé con ở đây, đặt 5 bàn mà quán sắp xếp chu đáo cực kỳ. Bãi xe ô tô rộng rãi, mấy anh bạn đi xe hơi tới cứ khen miết vì dễ đậu xe."</p>
+                        <h6 class="fw-bold mb-0 text-end">- Chị Thảo (Gò Dầu)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: CTA MẠNH MẼ (5%) -->
+    <section class="py-5 text-center bg-dark text-white" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1200') center center/cover;">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-3">Cuối Tuần Này Ăn Gì?</h2>
+            <p class="fs-5 text-light-50 mb-4 mx-auto" style="max-width: 600px;">Đến Trường Làng Quán để thưởng thức món ngon đồng quê chuẩn vị trong không gian xanh mát, thư thái.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="tel:+84784325522" class="btn btn-custom-orange btn-lg">📞 GỌI ĐẶT BÀN GẤP</a>
+                <a href="https://maps.app.goo.gl/UPw612r7TxEahTPN6" target="_blank" class="btn btn-outline-light btn-lg">🗺️ CHỈ ĐƯỜNG ĐẾN QUÁN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHÂN TRANG (FOOTER) -->
+    <footer>
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4 class="fw-bold text-warning mb-3">TRƯỜNG LÀNG QUÁN</h4>
+                    <p class="mb-2">📍 <b>Địa chỉ:</b> 39 Đ. Lộc Thành 2, P. Trảng Bàng, Tỉnh Tây Ninh.</p>
+                    <p class="mb-2">📞 <b>Điện thoại:</b> 078.432.5522 (Em Hương)</p>
+                    <p class="mb-2">🕒 <b>Giờ mở cửa:</b> 09:00 - 22:00 (Hằng ngày)</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center d-flex flex-column justify-content-center align-items-md-end align-items-center">
+                    <p class="mb-3">Kết nối với chúng tôi qua mạng xã hội để cập nhật ưu đãi mới nhất nhé!</p>
+                    <div>
+                        <a href="https://www.facebook.com/truonglangquan" class="btn btn-outline-warning btn-sm me-2">Facebook Page</a>
+                        <a href="https://maps.app.goo.gl/UPw612r7TxEahTPN6" class="btn btn-outline-warning btn-sm">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 bg-light">
+          
+        </div>
+    </footer>
+
+    <!-- Thư viện Javascript của Bootstrap để các nút bấm hoạt động mượt mà -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
